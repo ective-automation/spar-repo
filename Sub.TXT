@@ -1,0 +1,5 @@
+Sub RenameSheet(OldSheetName as String, NewSheetName as String)
+
+Sheets(OldSheetName).Name = NewSheetName
+
+End Sub

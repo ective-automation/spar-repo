@@ -1,0 +1,5 @@
+Function SumNumber(Var1 As Integer, Var2 As Integer) As Integer
+
+SumNumber = Var1 + Var2
+
+End Function
