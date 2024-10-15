@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1071,3038</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1071,3322</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InvokeCode_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -101,7 +101,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InvokeCode" sap:VirtualizedContainerService.HintSize="594,2973" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InvokeCode" sap:VirtualizedContainerService.HintSize="594,3257" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="SumNumberResult" />
     </Sequence.Variables>
@@ -183,7 +183,7 @@
       </ui:CommentOut.Body>
     </ui:CommentOut>
     <ui:Comment sap:VirtualizedContainerService.HintSize="532,270" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Use invoke VBScript to read outlook attachment and log the result&#xA;&#xA;You will need:&#xA;&#xA;VBS_GetEmailBody.vbs&#xA;&#xA;&#xA;Spar Training.msg&#xA;&#xA;Example of in argument:&#xA;&#xA;&quot;&quot;&quot;&quot;+in_strEmailAttachmentFilePath+&quot;&quot;&quot;&quot;&#xA;&#xA;" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,52" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,336" sap2010:WorkflowViewState.IdRef="CommentOut_9">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,257" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
@@ -200,7 +200,7 @@
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
