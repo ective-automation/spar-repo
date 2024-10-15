@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1097,4545</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1071,3038</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InvokeCode_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -101,7 +101,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InvokeCode" sap:VirtualizedContainerService.HintSize="644,4480" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InvokeCode" sap:VirtualizedContainerService.HintSize="594,2973" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="SumNumberResult" />
     </Sequence.Variables>
@@ -110,42 +110,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="582,368" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="www.google.com">
-      <ui:OpenBrowser.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,266" sap2010:WorkflowViewState.IdRef="Sequence_14">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="Function (element) {&#xD;&#xA;alert('Hello World!')&#xD;&#xA;}">
-              <ui:InjectJsScript.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c7def2ef-6011-4ed3-aaed-2e085140a661" InformativeScreenshot="1abfca295b8b094af64a3ada2b859efb" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Google - Google Chrome' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:InjectJsScript.Target>
-            </ui:InjectJsScript>
-          </Sequence>
-        </ActivityAction>
-      </ui:OpenBrowser.Body>
-    </ui:OpenBrowser>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="582,114" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Create list of integers, with number 2,4,6,8,10,1,3,5,9.&#xA;Add number 7 to the list sort it and then use MsgBox method inside invoke code to display the sorted list" />
-    <ui:InvokeCode Code="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Code - list" sap:VirtualizedContainerService.HintSize="582,165" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="532,114" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Create list of integers, with number 2,4,6,8,10,1,3,5,9.&#xA;Add number 7 to the list sort it and then use MsgBox method inside invoke code to display the sorted list" />
+    <ui:InvokeCode Code="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Code - list" sap:VirtualizedContainerService.HintSize="532,165" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
       <ui:InvokeCode.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="582,134" sap2010:WorkflowViewState.IdRef="Comment_2" Text="In .txt file write Function to sum two numbers.&#xA;Pass two arguments in (numbers two sum) and result argument  out.&#xA;&#xA;Display result with write line&#xA;" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="582,388" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="532,134" sap2010:WorkflowViewState.IdRef="Comment_2" Text="In .txt file write Function to sum two numbers.&#xA;Pass two arguments in (numbers two sum) and result argument  out.&#xA;&#xA;Display result with write line&#xA;" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,388" sap2010:WorkflowViewState.IdRef="CommentOut_6">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
@@ -166,8 +138,8 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="582,76" sap2010:WorkflowViewState.IdRef="Comment_3" Text="In .txt file write subroutine to rename sheet1 to HelloWorld" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="582,388" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="532,76" sap2010:WorkflowViewState.IdRef="Comment_3" Text="In .txt file write subroutine to rename sheet1 to HelloWorld" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,388" sap2010:WorkflowViewState.IdRef="CommentOut_7">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
@@ -188,8 +160,8 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="582,367" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Run this code from Excel file via Execute Macro&#xA;&#xA;Sub GuessingGame()&#xA;    Dim secretNumber As Integer&#xA;    Dim guess As Integer&#xA;&#xA;&#xA;    secretNumber = Int((10 - 1 + 1) * Rnd + 1)&#xA;&#xA;    Do&#xA;        guess = InputBox(&quot;Enter your guess:&quot;)&#xA;&#xA;        If guess = secretNumber Then&#xA;            MsgBox &quot;Correct!&quot;&#xA;            Exit Do&#xA;        ElseIf guess &gt; secretNumber Then&#xA;            MsgBox &quot;Too high&quot;&#xA;        Else&#xA;            MsgBox &quot;Too low&quot;&#xA;        End If&#xA;    Loop&#xA;&#xA;    MsgBox &quot;The secret number was: &quot; &amp; secretNumber&#xA;End Sub&#xA;" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="582,360" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="532,367" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Run this code from Excel file via Execute Macro&#xA;&#xA;Sub GuessingGame()&#xA;    Dim secretNumber As Integer&#xA;    Dim guess As Integer&#xA;&#xA;&#xA;    secretNumber = Int((10 - 1 + 1) * Rnd + 1)&#xA;&#xA;    Do&#xA;        guess = InputBox(&quot;Enter your guess:&quot;)&#xA;&#xA;        If guess = secretNumber Then&#xA;            MsgBox &quot;Correct!&quot;&#xA;            Exit Do&#xA;        ElseIf guess &gt; secretNumber Then&#xA;            MsgBox &quot;Too high&quot;&#xA;        Else&#xA;            MsgBox &quot;Too low&quot;&#xA;        End If&#xA;    Loop&#xA;&#xA;    MsgBox &quot;The secret number was: &quot; &amp; secretNumber&#xA;End Sub&#xA;" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,360" sap2010:WorkflowViewState.IdRef="CommentOut_8">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,281" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
@@ -210,24 +182,31 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="582,56" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Honorable mentions:" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="582,336" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="532,270" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Use invoke VBScript to read outlook attachment and log the result&#xA;&#xA;You will need:&#xA;&#xA;VBS_GetEmailBody.vbs&#xA;&#xA;&#xA;Spar Training.msg&#xA;&#xA;Example of in argument:&#xA;&#xA;&quot;&quot;&quot;&quot;+in_strEmailAttachmentFilePath+&quot;&quot;&quot;&quot;&#xA;&#xA;" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,52" sap2010:WorkflowViewState.IdRef="CommentOut_9">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,257" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,257" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeVBScript FileName="{x:Null}" KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="InvokeVBScript_2" WaitForOutput="True">
+          <ui:InvokeVBScript FileName="{x:Null}" KillOnTimeout="{x:Null}" Result="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="InvokeVBScript_3" WaitForOutput="True">
             <ui:InvokeVBScript.Arguments>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </ui:InvokeVBScript.Arguments>
           </ui:InvokeVBScript>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="582,1177" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="532,56" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Honorable mentions:" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,1098" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
@@ -279,6 +258,12 @@
           </uja:JavaScope>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
   </Sequence>
 </Activity>
