@@ -1,6 +1,8 @@
+' you may have to switch the order of "Check and close the document recovery Pane" with "Handle any recovery popups"
+
 Option Explicit
 
-Dim objExcel, objWorkbook, objDocumentRecoveryPane, excelPath
+Dim objExcel, objWorkbook, objDocumentRecoveryPane, excelPath, dialog
 
 ' Check if the script has received an argument for the Excel file path
 If WScript.Arguments.Count = 0 Then
@@ -19,6 +21,10 @@ If Err.Number <> 0 Then
 End If
 On Error GoTo 0
 
+' Set DisplayAlerts and EnableEvents to False to suppress pop-ups and events
+objExcel.DisplayAlerts = False
+objExcel.EnableEvents = False
+
 ' Open the provided Excel file
 On Error Resume Next
 Set objWorkbook = objExcel.Workbooks.Open(excelPath)
@@ -31,7 +37,7 @@ On Error GoTo 0
 ' Make Excel visible (optional)
 objExcel.Visible = True
 
-' Check if the Document Recovery Pane is open and close it
+' Check and close the Document Recovery Pane if it exists
 If Not objExcel Is Nothing Then
     For Each objDocumentRecoveryPane In objExcel.CommandBars
         If InStr(1, objDocumentRecoveryPane.Name, "Document Recovery") > 0 Then
@@ -40,6 +46,25 @@ If Not objExcel Is Nothing Then
         End If
     Next
 End If
+
+' Handle any recovery-related pop-ups
+On Error Resume Next
+For Each dialog In objExcel.Dialogs
+    If InStr(1, dialog.Name, "Document Recovery") > 0 Then
+        dialog.Hide ' Automatically close any document recovery-related dialogs
+    End If
+Next
+On Error GoTo 0
+
+' Save the workbook after closing Document Recovery Pane
+objWorkbook.Save
+
+' Close the workbook (optional) but leave Excel running
+objWorkbook.Close False
+
+' Restore DisplayAlerts and EnableEvents to their default (True)
+objExcel.DisplayAlerts = True
+objExcel.EnableEvents = True
 
 ' Clean up
 Set objDocumentRecoveryPane = Nothing
