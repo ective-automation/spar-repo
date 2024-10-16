@@ -1,0 +1,217 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="InvokeCode" this:InvokeCode.in_list="[new list(of Integer)({1,2,3,10,8,6,5,4,9})]" this:InvokeCode.in_strEmailAttachmentFilePath="C:\Users\ECTIVE\OneDrive - Ective\Documents\UiPath\spar-repo\Spar Training.msg" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uja="clr-namespace:UiPath.Java.Activities;assembly=UiPath.Java.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_list" Type="InArgument(scg:List(x:Int32))" />
+    <x:Property Name="in_strEmailAttachmentFilePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>634,3990.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>InvokeCode_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
+      <x:String>UiPath.Java.Activities</x:String>
+      <x:String>UiPath.Java</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Java</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="InvokeCode" sap:VirtualizedContainerService.HintSize="644,3926" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Object" Name="SumNumberResult" />
+      <Variable x:TypeArguments="x:String" Name="strEmailResult" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="582,173.33333333333334" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Create list of integers, with number 2,4,6,8,10,1,3,5,9.&#xA;&#xA;Inside the invoke code:&#xA;&#xA;write a code to add number 7 to the list, sort it and then display using MsgBox " />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_list.Add(7)&#xA;io_list.Sort&#xA;MsgBox(String.Join(&quot;,&quot;,io_list))" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="582,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+      <ui:InvokeCode.Arguments>
+        <InOutArgument x:TypeArguments="scg:List(x:Int32)" x:Key="io_list">[in_list]</InOutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="582,114.66666666666667" sap2010:WorkflowViewState.IdRef="Comment_2" Text="In .txt file write function to sum two numbers.&#xA;Pass in two arguments, representing the numbers you want to sum.&#xA;Display the result with write line.&#xA;" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Function Sum numbers" sap:VirtualizedContainerService.HintSize="582,198" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="C:\Users\ECTIVE\OneDrive - Ective\Desktop\Ective\_aEctive Internal\Training Templates\InvokeMethod\Test.xlsm">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <ui:InvokeVBA CodeFilePath="C:\Users\ECTIVE\OneDrive - Ective\Desktop\Ective\_aEctive Internal\Training Templates\InvokeMethod\Function.TXT" DisplayName="Invoke VBA" EntryMethodName="SumNumber" EntryMethodParameters="[{&quot;1&quot;,&quot;5&quot;}]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" OutputValue="[SumNumberResult]" />
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="582,92" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Sum Result:&quot; +SumNumberResult.ToString]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="582,76" sap2010:WorkflowViewState.IdRef="Comment_3" Text="In .txt file write subroutine to rename sheet1 to HelloWorld" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Sub Rename Sheet" sap:VirtualizedContainerService.HintSize="582,198" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" Visible="False" WorkbookPath="C:\Users\ECTIVE\OneDrive - Ective\Desktop\Ective\_aEctive Internal\Training Templates\InvokeMethod\Test.xlsm">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="C:\Users\ECTIVE\OneDrive - Ective\Desktop\Ective\_aEctive Internal\Training Templates\InvokeMethod\Sub.TXT" DisplayName="Invoke VBA" EntryMethodName="RenameSheet" EntryMethodParameters="[{&quot;Sheet1&quot;,&quot;HelloWorld&quot;}]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_3" />
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="582,386" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Run this code from Excel file via Execute Macro&#xA;&#xA;Sub GuessingGame()&#xA;    Dim secretNumber As Integer&#xA;    Dim guess As Integer&#xA;&#xA;    ' Generate a random number between 1 and 100&#xA;    secretNumber = Int((10 - 1 + 1) * Rnd + 1)&#xA;&#xA;    Do&#xA;        guess = InputBox(&quot;Enter your guess:&quot;)&#xA;&#xA;        If guess = secretNumber Then&#xA;            MsgBox &quot;Correct!&quot;&#xA;            Exit Do&#xA;        ElseIf guess &gt; secretNumber Then&#xA;            MsgBox &quot;Too high&quot;&#xA;        Else&#xA;            MsgBox &quot;Too low&quot;&#xA;        End If&#xA;    Loop&#xA;&#xA;    MsgBox &quot;The secret number was: &quot; &amp; secretNumber&#xA;End Sub&#xA;" />
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="582,170" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" ReadOnly="True" WorkbookPath="C:\Users\ECTIVE\OneDrive - Ective\Desktop\Ective\_aEctive Internal\Training Templates\InvokeMethod\Test.xlsm">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <ui:ExecuteMacro ContinueOnError="{x:Null}" MacroOutput="{x:Null}" DisplayName="Execute Macro" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="ExecuteMacro_2" MacroName="GuessingGame" />
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="582,289.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Use invoke VBScript to read outlook attachment&lt;Spar Training.msg&gt; and log the result&#xA;&#xA;You will need:&#xA;&#xA;VBS_GetEmailBody.vbs&#xA;&#xA;&#xA;Spar Training.msg&#xA;&#xA;Example of in argument:&#xA;&#xA;&quot;&quot;&quot;&quot;+in_strEmailAttachmentFilePath+&quot;&quot;&quot;&quot;&#xA;&#xA;" />
+    <ui:InvokeVBScript UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="C:\Users\ECTIVE\OneDrive - Ective\Documents\UiPath\spar-repo\VBS_GetEmailBody.vbs" sap:VirtualizedContainerService.HintSize="582,150.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeVBScript_3" KillOnTimeout="True" Result="[strEmailResult]" RunInBatchMode="False" TimeoutMS="30000" WaitForOutput="True">
+      <ui:InvokeVBScript.Arguments>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;&quot;&quot;&quot;+in_strEmailAttachmentFilePath+&quot;&quot;&quot;&quot;" />
+          </InArgument>
+        </scg:List>
+      </ui:InvokeVBScript.Arguments>
+    </ui:InvokeVBScript>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="582,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[strEmailResult]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="582,1177" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,1098" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="484,448" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="Path to library" TargetPlatform="x64" Version="Python 3.6">
+            <p:PythonScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,411" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:LoadScript Code="{x:Null}" Result="{x:Null}" ScriptFile="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="LoadScript_1" />
+                  <p:InvokeMethod Name="{x:Null}" Parameters="{x:Null}" Result="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" />
+                  <p:GetObject x:TypeArguments="x:Object" PythonObject="{x:Null}" Result="{x:Null}" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="GetObject`1_1" />
+                </Sequence>
+              </ActivityAction>
+            </p:PythonScope.Body>
+          </p:PythonScope>
+          <uja:JavaScope JavaPath="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Java Scope" sap:VirtualizedContainerService.HintSize="484,499" sap2010:WorkflowViewState.IdRef="JavaScope_1">
+            <uja:JavaScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="JavaInvokerProperty" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,462" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uja:LoadJar JarPath="{x:Null}" DisplayName="Load Jar" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="LoadJar_1" />
+                  <uja:InvokeJavaMethod MethodName="{x:Null}" ParametersList="{x:Null}" Result="{x:Null}" TargetObject="{x:Null}" TargetType="{x:Null}" DisplayName="Invoke Java Method" sap:VirtualizedContainerService.HintSize="388,121" sap2010:WorkflowViewState.IdRef="InvokeJavaMethod_1">
+                    <uja:InvokeJavaMethod.Parameters>
+                      <scg:List x:TypeArguments="InArgument" Capacity="0" />
+                    </uja:InvokeJavaMethod.Parameters>
+                  </uja:InvokeJavaMethod>
+                  <uja:ConvertJavaObject x:TypeArguments="x:Object" JavaObject="{x:Null}" Result="{x:Null}" DisplayName="Convert Java Object" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="ConvertJavaObject`1_1" />
+                </Sequence>
+              </ActivityAction>
+            </uja:JavaScope.Body>
+          </uja:JavaScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

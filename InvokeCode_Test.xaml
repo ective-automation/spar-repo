@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1071,3381</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>696,4077.333333333334</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InvokeCode_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -101,7 +101,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InvokeCode" sap:VirtualizedContainerService.HintSize="594,3316" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InvokeCode" sap:VirtualizedContainerService.HintSize="706,4012.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="SumNumberResult" />
     </Sequence.Variables>
@@ -110,22 +110,24 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="532,173" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Create list of integers, with number 2,4,6,8,10,1,3,5,9.&#xA;&#xA;Inside the invoke code:&#xA;&#xA;write a code to add number 7 to the list, sort it and then display using MsgBox " />
-    <ui:InvokeCode Code="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Code - list" sap:VirtualizedContainerService.HintSize="532,165" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="644,173.33333333333334" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Create list of integers, with number 2,4,6,8,10,1,3,5,9.&#xA;&#xA;Inside the invoke code:&#xA;&#xA;write a code to add number 7 to the list, sort it and then display using MsgBox " />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_list.Add(7)&#xD;&#xA;in_list.sort&#xD;&#xA;MsgBox (String.Join(&quot;|&quot;,in_list).ToString)" DisplayName="Invoke Code - list" sap:VirtualizedContainerService.HintSize="644,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
       <ui:InvokeCode.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        <InArgument x:TypeArguments="scg:List(x:Int32)" x:Key="in_list">
+          <VisualBasicValue x:TypeArguments="scg:List(x:Int32)" ExpressionText="in_list" />
+        </InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="532,134" sap2010:WorkflowViewState.IdRef="Comment_8" Text="In .txt file write function to sum two numbers.&#xA;Pass in two arguments, representing the numbers you want to sum.&#xA;&#xD;&#xA;Display the result with write line.&#xA;" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,388" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="644,134" sap2010:WorkflowViewState.IdRef="Comment_8" Text="In .txt file write function to sum two numbers.&#xA;Pass in two arguments, representing the numbers you want to sum.&#xA;&#xA;Display the result with write line.&#xA;" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="644,54" sap2010:WorkflowViewState.IdRef="CommentOut_10">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,308.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" WorkbookPath="{x:Null}" DisplayName="Excel Application Scope - function" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000">
+          <ui:ExcelApplicationScope Password="{x:Null}" WorkbookPath="{x:Null}" DisplayName="Excel Application Scope - function" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_10" InstanceCachePeriod="3000">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
@@ -137,53 +139,37 @@
           </ui:ExcelApplicationScope>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="532,76" sap2010:WorkflowViewState.IdRef="Comment_3" Text="In .txt file write subroutine to rename sheet1 to HelloWorld" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,388" sap2010:WorkflowViewState.IdRef="CommentOut_7">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_12">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" WorkbookPath="{x:Null}" DisplayName="Excel Application Scope - subroutine" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000">
-            <ui:ExcelApplicationScope.Body>
-              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                </ActivityAction.Argument>
-                <ui:InvokeVBA CodeFilePath="{x:Null}" OutputValue="{x:Null}" DisplayName="Invoke VBA" EntryMethodName="Main" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_7" />
-              </ActivityAction>
-            </ui:ExcelApplicationScope.Body>
-          </ui:ExcelApplicationScope>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="532,367" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Run this code from Excel file via Execute Macro&#xA;&#xA;Sub GuessingGame()&#xA;    Dim secretNumber As Integer&#xA;    Dim guess As Integer&#xA;&#xA;&#xA;    secretNumber = Int((10 - 1 + 1) * Rnd + 1)&#xA;&#xA;    Do&#xA;        guess = InputBox(&quot;Enter your guess:&quot;)&#xA;&#xA;        If guess = secretNumber Then&#xA;            MsgBox &quot;Correct!&quot;&#xA;            Exit Do&#xA;        ElseIf guess &gt; secretNumber Then&#xA;            MsgBox &quot;Too high&quot;&#xA;        Else&#xA;            MsgBox &quot;Too low&quot;&#xA;        End If&#xA;    Loop&#xA;&#xA;    MsgBox &quot;The secret number was: &quot; &amp; secretNumber&#xA;End Sub&#xA;" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,360" sap2010:WorkflowViewState.IdRef="CommentOut_8">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,281" sap2010:WorkflowViewState.IdRef="Sequence_13">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" WorkbookPath="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,170" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_9" InstanceCachePeriod="3000">
-            <ui:ExcelApplicationScope.Body>
-              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                </ActivityAction.Argument>
-                <ui:ExecuteMacro ContinueOnError="{x:Null}" MacroName="{x:Null}" MacroOutput="{x:Null}" DisplayName="Execute Macro" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="ExecuteMacro_3" />
-              </ActivityAction>
-            </ui:ExcelApplicationScope.Body>
-          </ui:ExcelApplicationScope>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="532,270" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Use invoke VBScript to read outlook attachment and log the result&#xA;&#xA;You will need:&#xA;&#xA;VBS_GetEmailBody.vbs&#xA;&#xA;&#xA;Spar Training.msg&#xA;&#xA;Example of in argument:&#xA;&#xA;&quot;&quot;&quot;&quot;+in_strEmailAttachmentFilePath+&quot;&quot;&quot;&quot;&#xA;&#xA;" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,336" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="644,76" sap2010:WorkflowViewState.IdRef="Comment_3" Text="In .txt file write subroutine to rename sheet1 to HelloWorld" />
+    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope - subroutine" sap:VirtualizedContainerService.HintSize="644,198" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" Visible="False" WorkbookPath="C:\Users\ECTIVE\OneDrive - Ective\Documents\UiPath\spar-repo\Test.xlsm">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="C:\Users\ECTIVE\OneDrive - Ective\Documents\UiPath\spar-repo\Sub.TXT" DisplayName="Invoke VBA" EntryMethodName="RenameSheet" EntryMethodParameters="[{&quot;Sheet1&quot;,&quot;NewSheet&quot;}]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_7" />
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="644,366.6666666666667" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Run this code from Excel file via Execute Macro&#xA;&#xA;Sub GuessingGame()&#xA;    Dim secretNumber As Integer&#xA;    Dim guess As Integer&#xA;&#xA;&#xA;    secretNumber = Int((10 - 1 + 1) * Rnd + 1)&#xA;&#xA;    Do&#xA;        guess = InputBox(&quot;Enter your guess:&quot;)&#xA;&#xA;        If guess = secretNumber Then&#xA;            MsgBox &quot;Correct!&quot;&#xA;            Exit Do&#xA;        ElseIf guess &gt; secretNumber Then&#xA;            MsgBox &quot;Too high&quot;&#xA;        Else&#xA;            MsgBox &quot;Too low&quot;&#xA;        End If&#xA;    Loop&#xA;&#xA;    MsgBox &quot;The secret number was: &quot; &amp; secretNumber&#xA;End Sub&#xA;" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="644,170" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" InstanceCachePeriod="3000" WorkbookPath="C:\Users\ECTIVE\OneDrive - Ective\Documents\UiPath\spar-repo\Test.xlsm">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <ui:ExecuteMacro ContinueOnError="{x:Null}" MacroOutput="{x:Null}" DisplayName="Execute Macro" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="ExecuteMacro_3" MacroName="GuessingGame" />
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="644,270" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Use invoke VBScript to read outlook attachment and log the result&#xA;&#xA;You will need:&#xA;&#xA;VBS_GetEmailBody.vbs&#xA;&#xA;&#xA;Spar Training.msg&#xA;&#xA;Example of in argument:&#xA;&#xA;&quot;&quot;&quot;&quot;+in_strEmailAttachmentFilePath+&quot;&quot;&quot;&quot;&#xA;&#xA;" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="644,336" sap2010:WorkflowViewState.IdRef="CommentOut_9">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,257" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
@@ -205,62 +191,81 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="532,56" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Honorable mentions:" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="644,56" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Honorable mentions:" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="644,1463" sap2010:WorkflowViewState.IdRef="CommentOut_5">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,1098" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence sap:VirtualizedContainerService.HintSize="608,1384" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="484,448" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="Path to library" TargetPlatform="x64" Version="Python 3.6">
-            <p:PythonScope.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,411" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <p:LoadScript Code="{x:Null}" Result="{x:Null}" ScriptFile="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="LoadScript_1" />
-                  <p:InvokeMethod Name="{x:Null}" Parameters="{x:Null}" Result="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" />
-                  <p:GetObject x:TypeArguments="x:Object" PythonObject="{x:Null}" Result="{x:Null}" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="GetObject`1_1" />
-                </Sequence>
-              </ActivityAction>
-            </p:PythonScope.Body>
-          </p:PythonScope>
-          <uja:JavaScope JavaPath="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Java Scope" sap:VirtualizedContainerService.HintSize="484,499" sap2010:WorkflowViewState.IdRef="JavaScope_1">
-            <uja:JavaScope.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="JavaInvokerProperty" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,462" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uja:LoadJar JarPath="{x:Null}" DisplayName="Load Jar" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="LoadJar_1" />
-                  <uja:InvokeJavaMethod MethodName="{x:Null}" ParametersList="{x:Null}" Result="{x:Null}" TargetObject="{x:Null}" TargetType="{x:Null}" DisplayName="Invoke Java Method" sap:VirtualizedContainerService.HintSize="388,121" sap2010:WorkflowViewState.IdRef="InvokeJavaMethod_1">
-                    <uja:InvokeJavaMethod.Parameters>
-                      <scg:List x:TypeArguments="InArgument" Capacity="0" />
-                    </uja:InvokeJavaMethod.Parameters>
-                  </uja:InvokeJavaMethod>
-                  <uja:ConvertJavaObject x:TypeArguments="x:Object" JavaObject="{x:Null}" Result="{x:Null}" DisplayName="Convert Java Object" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="ConvertJavaObject`1_1" />
-                </Sequence>
-              </ActivityAction>
-            </uja:JavaScope.Body>
-          </uja:JavaScope>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,1098" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="484,448" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="Path to library" TargetPlatform="x64" Version="Python 3.6">
+              <p:PythonScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,411" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:LoadScript Code="{x:Null}" Result="{x:Null}" ScriptFile="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="LoadScript_1" />
+                    <p:InvokeMethod Name="{x:Null}" Parameters="{x:Null}" Result="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" />
+                    <p:GetObject x:TypeArguments="x:Object" PythonObject="{x:Null}" Result="{x:Null}" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="GetObject`1_1" />
+                  </Sequence>
+                </ActivityAction>
+              </p:PythonScope.Body>
+            </p:PythonScope>
+            <uja:JavaScope JavaPath="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Java Scope" sap:VirtualizedContainerService.HintSize="484,499" sap2010:WorkflowViewState.IdRef="JavaScope_1">
+              <uja:JavaScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="JavaInvokerProperty" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,462" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uja:LoadJar JarPath="{x:Null}" DisplayName="Load Jar" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="LoadJar_1" />
+                    <uja:InvokeJavaMethod MethodName="{x:Null}" ParametersList="{x:Null}" Result="{x:Null}" TargetObject="{x:Null}" TargetType="{x:Null}" DisplayName="Invoke Java Method" sap:VirtualizedContainerService.HintSize="388,121" sap2010:WorkflowViewState.IdRef="InvokeJavaMethod_1">
+                      <uja:InvokeJavaMethod.Parameters>
+                        <scg:List x:TypeArguments="InArgument" Capacity="0" />
+                      </uja:InvokeJavaMethod.Parameters>
+                    </uja:InvokeJavaMethod>
+                    <uja:ConvertJavaObject x:TypeArguments="x:Object" JavaObject="{x:Null}" Result="{x:Null}" DisplayName="Convert Java Object" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="ConvertJavaObject`1_1" />
+                  </Sequence>
+                </ActivityAction>
+              </uja:JavaScope.Body>
+            </uja:JavaScope>
+          </Sequence>
+          <ui:InjectJsScript InputParameter="{x:Null}" ScriptCode="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="546,135" sap2010:WorkflowViewState.IdRef="InjectJsScript_2">
+            <ui:InjectJsScript.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c9acb6bb-d54f-485e-a778-b3acde999622">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:InjectJsScript.Target>
+          </ui:InjectJsScript>
         </Sequence>
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
