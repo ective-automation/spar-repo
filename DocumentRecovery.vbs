@@ -2,6 +2,7 @@
 
 Option Explicit
 
+
 Dim objExcel, objWorkbook, objDocumentRecoveryPane, excelPath, dialog
 
 ' Check if the script has received an argument for the Excel file path
@@ -35,7 +36,7 @@ End If
 On Error GoTo 0
 
 ' Make Excel visible (optional)
-objExcel.Visible = True
+objExcel.Visible = False
 
 ' Check and close the Document Recovery Pane if it exists
 If Not objExcel Is Nothing Then
