@@ -1,0 +1,25 @@
+Sub ClearFilters(sheetName As String)
+    Dim ws As Worksheet
+    
+    ' Attempt to set the worksheet without raising an error
+    On Error Resume Next
+    Set ws = Worksheets(sheetName)
+    On Error GoTo 0 ' Reset error handling to default
+    
+    ' Check if the worksheet was successfully set
+    If Not ws Is Nothing Then
+        ' Check if the worksheet is protected
+        If Not ws.ProtectContents Then
+            ' If AutoFilterMode is True, indicating filters are applied
+            If ws.AutoFilterMode Then
+                ' Clear the filters
+                ws.AutoFilterMode = False
+            End If
+        Else
+            ' Optionally, you can log that the sheet is protected or take other actions
+            ' Debug.Print "Sheet '" & sheetName & "' is protected. Skipping."
+        End If
+    End If
+    
+
+End Sub

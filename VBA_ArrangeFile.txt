@@ -1,0 +1,15 @@
+Sub ArrangeFile()
+    Dim ws As Worksheet
+    
+    ' Loop through each sheet in the workbook
+    For Each ws In ThisWorkbook.Sheets
+        ' Activate the sheet
+        ws.Activate
+        
+        ' Select cell A1
+        ws.Range("A1").Select
+    Next ws
+    
+    ' Select the "II.RECONCILIATION_YTD" sheet
+    ThisWorkbook.Sheets("II.RECONCILIATION_YTD").Activate
+End Sub

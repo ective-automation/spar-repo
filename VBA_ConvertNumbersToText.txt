@@ -1,0 +1,28 @@
+Sub ConvertNumbersToText()
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    Dim rng As Range
+    Dim cell As Range
+    
+    ' Set the worksheet where you want to convert numbers to text
+    For Each ws In ThisWorkbook.Worksheets
+        If ws.Name = "dl_BS" Or ws.Name = "dl_PL" Then
+            ' Find the last row in column B, starting from B12
+            lastRow = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
+            If lastRow >= 12 Then ' Check if there are at least 12 rows in column B
+                ' Define the range to work with
+                Set rng = ws.Range("B12:B" & lastRow)
+                
+                ' Loop through each cell in the range
+                For Each cell In rng
+                    ' Check if the cell contains a number
+                    If IsNumeric(cell.Value) Then
+                        ' Change the cell value to text format to match the one in main file
+                        cell.Value = "' " & cell.Value
+                    End If
+                Next cell
+            End If
+        End If
+    Next ws
+End Sub
+

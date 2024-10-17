@@ -1,0 +1,5 @@
+Sub UnprotectSheet(sheetname)
+
+Sheets(sheetname).unprotect
+
+End Sub

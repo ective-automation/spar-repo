@@ -1,0 +1,30 @@
+Sub UnhideColumns()
+    Dim ws As Worksheet
+    Dim sheetNames As Variant
+    Dim sheetName As Variant
+    
+    ' Specify the sheet names in an array
+    sheetNames = Array("dl_BS", "dl_PL")
+    
+    ' Loop through each sheet name in the array
+    For Each sheetName In sheetNames
+        ' Reset error handling before each iteration
+        On Error Resume Next
+        
+        ' Attempt to set the worksheet
+        Set ws = Worksheets(sheetName)
+        
+        ' Check if an error occurred (e.g., sheet doesn't exist)
+        If Err.Number <> 0 Then
+            ' Clear the error and continue to the next iteration
+            Err.Clear
+        Else
+            ' Check if the sheet is protected
+            If Not ws.ProtectContents Then
+                ' If the sheet is not protected, unhide columns A to Q
+                ws.Columns("A:Q").EntireColumn.Hidden = False
+            ' Else, you can add additional code here to handle the protected sheet case if needed
+            End If
+        End If
+    Next sheetName
+End Sub
